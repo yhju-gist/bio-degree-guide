@@ -312,6 +312,8 @@ table.ex td{padding:5px 8px;border-top:1px solid var(--line);color:var(--fg);fon
 .sub{display:inline-block;margin-top:3px;font-size:12.5px;font-weight:800;border-radius:6px;padding:1px 8px}
 .sub.pr{background:var(--gray-soft);color:var(--gray)}
 .sub.em{background:var(--blue-soft,#EAF1F8);color:var(--gray)}
+a.sub.mto{text-decoration:none;border:1px solid var(--line)}a.sub.mto:hover{border-color:var(--gray)}
+.now .where.rule a{color:var(--red)}
 label .sub{display:block;width:max-content;max-width:100%}
 .dlb{display:inline-block;text-decoration:none;margin-left:6px;border:1.5px solid var(--red);background:var(--bg);color:var(--red);font:inherit;font-size:12.5px;font-weight:800;border-radius:999px;padding:1px 10px;cursor:pointer;vertical-align:1px;white-space:nowrap}
 .dlb:hover{background:var(--red);color:#fff}.dlb:disabled{opacity:.6}
@@ -521,7 +523,7 @@ const DATA = {
     lead:'결과보고서를 낸 뒤에는 <b>논문 제목을 바꿀 수 없어요.</b> 결과보고서 제목 = 최종 논문 제목.',
     items:[['h','한글 2','석사학위 논문심사 결과보고서 (심사위원 서명)',MSF],['','','최종 통과 논문의 <b>초록 사본 1부</b>','5. (공통 2) 논문작성 예시 및 견본.hwp (참조5)'],
      ['x','엑셀 8-1·8-2','심사료 청구서 (내부위원 / 국내 외부위원)',MSX],['x','엑셀 9','학위수여대상자 학위논문 제목 — 영문 이름이 학위증에 그대로 찍혀요',MSX],['o','해당자','디펜스 후 제목이 또 바뀌었으면 논문제목 변경사유서(한글 3) ②칸을 채워 다시 제출 — 제출 방법은 학과 사무실 확인',MSF]],
-    to:'제출: <b>학과 사무실</b>에 내요(학과가 학적팀으로 보내요) · 엑셀 양식은 이메일로도',
+    to:'제출: <b>학과 사무실</b>에 내요(학과가 학적팀으로 보내요) · 엑셀 양식은 이메일(<b>jungmin@gist.ac.kr</b>)로도',
     warn:[['','생명과학과 마감은 <b>12.21.(월)</b>이에요. 학적팀 공통 일정(12.31)보다 빨라요.'],['g','<b>엑셀 9의 영문 이름</b>은 제출 후 고칠 수 없어요. 철자를 신중히 확인하세요.']]},
    {d:D(2027,1,6), short:'인준서 사본', h:'인준서 사본을 냅니다',
     lead:'심사위원 전원이 <b>한 장에</b> 서명한 인준서의 사본 1부를 학과 사무실에 내요.',
@@ -589,7 +591,7 @@ const DATA = {
      ['','','최종 통과 논문의 <b>초록 사본 1부</b>',''],['x','엑셀 10','학위수여대상자 학위논문 제목 — 영문 이름이 학위증에 그대로',PHX],
      ['x','엑셀 11·12','논문 게재목록(생명과학과 양식: 3년 중 최고 IF·5-Year IF 칸 포함) · 논문 게재실적',PHX],
      ['','','<b>ZEUS 논문게재실적 입력</b>: 자격/졸업 → 논문 학술지게재입력 (양식 11과 같은 내용, 붙임 4-4 매뉴얼)',MAN4]],
-    to:'제출: <b>학과 사무실</b>에 내요(학과가 학적팀으로 보내요) · 엑셀 양식은 이메일로도',
+    to:'제출: <b>학과 사무실</b>에 내요(학과가 학적팀으로 보내요) · 엑셀 양식은 이메일(<b>jungmin@gist.ac.kr</b>)로도',
     warn:[['','생명과학과 마감은 <b>11.23.(월)</b>이에요. 학적팀 공통 일정(11.30)보다 1주 빨라요.']]},
    {d:D(2026,12,8), short:'인준서 사본', h:'인준서 사본을 냅니다',
     lead:'국내·해외 심사위원 전원이 <b>한 장에</b> 서명한 인준서의 사본 1부를 학과 사무실에 내요.',
@@ -692,7 +694,7 @@ const DATA_EN = {
     lead:'Once the report is filed, <b>the title can no longer change.</b> Report title = final thesis title.',
     items:[['h','Form 2','Thesis evaluation report (signed by the committee)',MSFe],['','','1 copy of the <b>abstract</b> of the approved thesis','5. (공통 2) 논문작성 예시 및 견본.hwp (ref. 5)'],
      ['x','Sheet 8-1·8-2','Examination fee claims (internal / domestic external)',MSX],['x','Sheet 9','Thesis title sheet — your English name is printed on the diploma',MSX],['o','If applicable','Title changed again after the defense? Fill box ② of the title-change statement (Form 3) and resubmit — ask the department office how',MSFe]],
-    to:'Submit to: <b>department office</b> (they forward it to the Academic Affairs Team) · Excel forms by e-mail as well',
+    to:'Submit to: <b>department office</b> (they forward it to the Academic Affairs Team) · Excel forms by e-mail as well (<b>jungmin@gist.ac.kr</b>)',
     warn:[['','The Life Sciences deadline is <b>Mon, Dec 21</b> — earlier than the institute-wide schedule (Dec 31).'],['g','<b>The English name on Sheet 9</b> cannot be corrected later. Check the spelling carefully.']]},
    {d:D(2027,1,6), short:'Approval copy', h:'Submit a copy of the approval sheet',
     lead:'Hand in 1 copy of the approval sheet signed by every committee member <b>on one sheet</b> to the department office.',
@@ -756,7 +758,7 @@ const DATA_EN = {
      ['','','1 copy of the <b>abstract</b>',''],['x','Sheet 10','Dissertation title sheet — your English name is printed on the diploma',PHX],
      ['x','Sheet 11·12','Publication list (Life Sciences version with best-of-3-years IF and 5-Year IF columns) and publication record',PHX],
      ['','','<b>Enter your publications in ZEUS</b>: Qualification/Graduation → Journal publication entry (same content as the publication list, Att. 4-4 manual)',MAN4]],
-    to:'Submit to: <b>department office</b> (they forward it to the Academic Affairs Team) · Excel forms by e-mail as well',
+    to:'Submit to: <b>department office</b> (they forward it to the Academic Affairs Team) · Excel forms by e-mail as well (<b>jungmin@gist.ac.kr</b>)',
     warn:[['','The Life Sciences deadline is <b>Mon, Nov 23</b> — one week earlier than the institute-wide schedule (Nov 30).']]},
    {d:D(2026,12,8), short:'Approval copy', h:'Submit a copy of the approval sheet',
     lead:'Hand in 1 copy of the approval sheet signed by every domestic and overseas member <b>on one sheet</b> to the department office.',
@@ -1018,7 +1020,9 @@ function renderBand(){const b=document.getElementById('deptband');const en=lang=
  b.innerHTML=`<span class="lgw"><img class="lg" src="${LIFE_LOGO}" alt="GIST 생명과학과 Department of Life Sciences"></span><span class="sep"></span><span class="dn"><b>${en?'Degree Guide':'학위수여 길잡이'}</b><small>${en?'February 2027 commencement':'2027년 2월 졸업'}</small></span>`}
 function subOf(it){const t=(it[1]||'')+' '+(it[2]||'');const en=lang==='en';
  if(/(한글|HWP|Form|공통|Common) ?\d/.test(t))return `<span class="sub pr">🖨 ${en?'Print it and hand in on paper':'출력해서 종이로 제출'}</span>`;
- if(/(엑셀|Sheet|XLS) ?\d/.test(t))return `<span class="sub em">✉️ ${en?'Submit the file by e-mail':'파일을 이메일로 제출'}</span>`;return ''}
+ if(/(엑셀|Sheet|XLS) ?\d/.test(t))return `<a class="sub em mto" href="${mailTo(it)}">✉️ ${en?'E-mail the file to '+esc(SUBMIT_MAIL):esc(SUBMIT_MAIL)+'로 파일 보내기'}</a>`;return ''}
+const SUBMIT_MAIL=(BIO_CONTACTS[0]||{}).mail||'jungmin@gist.ac.kr';
+function mailTo(it){const en=lang==='en';const c=cur==='ms'?(en?'M.S.':'석사'):(en?'Ph.D.':'박사');const f=(it&&it[1])?it[1]:(en?'Excel forms':'엑셀 양식');const sub=en?`[${c} degree, Feb 2027] ${f} submission - (name, student ID)`:`[2027년 2월 ${c} 학위수여] ${f} 제출 - (이름, 학번)`;const body=en?'Dear Ms. Lee,\n\nPlease find the attached Excel form(s).\n\nName:\nStudent ID:\nAdvisor:\n':'선생님, 안녕하세요.\n학위수여 엑셀 양식을 첨부하여 제출합니다.\n\n이름:\n학번:\n지도교수:\n';return 'mailto:'+SUBMIT_MAIL+'?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body)}
 const DRV='d:';
 const FILES_MS={'0. 석사 제출양식 목록.xlsx':'d:1A1MAc0pMCfAiGgFOcIdVTf8BVWAOiPl-','1. (Eng.) M.S. Documents for submission(1~5).docx':'d:1vL-4FwwzwuJI0zf61K97NY3zyKuXl5Ek',[MSF]:'d:1YjSBfGhCJYlLd-5S2AmKRx_7kusfsUYz',[MSX]:'d:1WpRoQmS0q1O_xLPHPJcnPLDE6KYAwyrC',[FORG]:'d:1B6HRi-zJUOXth-dxfsf3M_O9AYFg3e2t','4. (Common 1) Declaration of Ethical Conduct in Research.docx':'d:1FdClLOrEmdJlzfM2TyeFwJP_zp0UfP3d',[ETH]:'d:1MLkVSfemdOh8JaWDnmCYU0W7VwMOUsX_','5. (공통 2) 논문작성 예시 및 견본.hwp':'d:1z9NsIF6aqbvq_II3WfkDTLiNMXyVcERj','6. (Common 3) (Eng.) Agreement for Collection and Use of Personal Information(2022.9.).docx':'d:18QJ_2WU-W1k3uLwUbYTqP2QSZrZrh0pH','6. (공통 3) (국문) 개인정보 수집 및 이용동의서.hwp':'d:1Qp-P-Cn47Qo0sZBxAAW4aD_5jWZwFx6S'};
 const FILES_PHD={'0. 박사 제출양식 목록.xlsx':'d:18PWV_70NYcQsO2F__qINtHxjZ_M5_5bQ','1. (Eng.) Ph.D. Documents for submission(1~5).docx':'d:17F82qBJgUKT0ZmZPRSGD2X9zGk0s00ZA',[PHF]:'d:1DldSCIl86GogV4H16wpA1u5lg8RcBMHj',[PHX]:'d:1HKnp7mmeuHUQiuh8X3VoEr7sB0oNbaEl',[ENGX]:'d:1UdKKGYVXOvVB8aAtEu3rjvAj3vMuIbb5','4. (Common 1) Declaration of Ethical Conduct in Research.docx':'d:1Qq0-vdKuYkXGLpFRPt4iWi2iyByOk8R9',[ETH]:'d:1aucmfdSTrXOVPHiV_epUosDjaT3ZW2kx','5. (공통 2) 논문작성 예시 및 견본.hwp':'d:1iMr4i2cLhVharCq7eyEpMBL7o6obw4GF','6. (Common 3) (Eng.) Agreement for Collection and Use of Personal Information(2022.9.).docx':'d:16ei2T8tW0Nayjes7BQ6QMFuEsI4drga0','6. (공통 3) (국문) 개인정보 수집 및 이용동의서.hwp':'d:1WRNFGuWhF0apK_QdOSbpoqLkg1g-wA8q'};
@@ -1089,7 +1093,7 @@ function render(){setHelpText();renderBand();
   const hint='';
   const qn=wizQueue().length;const wbtn=qn?`<button class="wizbtn" id="wiz-open">${lang==='en'?`▶ New here? Follow one thing at a time <small>${qn} to do</small>`:`▶ 처음이면 여기부터 — 하나씩 따라하기 <small>할 일 ${qn}개</small>`}</button>`:'';
   now.innerHTML=`${wbtn}${alert}<div class="dd">${dd===0?'D-DAY':'D-'+dd}<small>${fmtL(s.d)} ${U.due}</small></div>
-   <div><h2>${U.now}${s.h}</h2><p class="what">${what}</p>${mini}${toTxt?`<p class="where">${U.where}${toTxt}</p>`:''}<p class="where rule">${lang==='en'?'🖨 HWP forms: print and hand in · ✉️ Excel forms: send by e-mail':'🖨 한글 양식은 출력해서 종이로 · ✉️ 엑셀 양식은 이메일로'}</p>${hint}
+   <div><h2>${U.now}${s.h}</h2><p class="what">${what}</p>${mini}${toTxt?`<p class="where">${U.where}${toTxt}</p>`:''}<p class="where rule">${lang==='en'?`🖨 HWP forms: print and hand in · ✉️ Excel forms: e-mail to <a href="${mailTo(null)}">${esc(SUBMIT_MAIL)}</a>`:`🖨 한글 양식은 출력해서 종이로 · ✉️ 엑셀 양식은 이메일로 <a href="${mailTo(null)}">${esc(SUBMIT_MAIL)}</a>`}</p>${hint}
    <div class="todaytxt">${U.todayis(fmtL(t))}</div>${quick}</div>`;
   const wb=document.getElementById('wiz-open');if(wb)wb.onclick=()=>wizOpen();
   now.querySelectorAll('.mini input').forEach(cb=>cb.onchange=()=>{state[cur]=state[cur]||{};state[cur][cb.dataset.k]=true;save(state);render()});
